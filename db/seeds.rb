@@ -13,6 +13,7 @@ b5 = Benefit.create :name => 'Lots of Greens!'
 b6 = Benefit.create :name => 'Immunity'
 
 Menu.destroy_all
+
 m1 = Menu.create :name => 'Smashed Avocado', :ingredients => 'Smashed avocado on sourdough toast served with cherry tomatoes, goats feta and rocket. Topped with lemon and pink salt.', :price => '$15.00', :size => 1, :weather => 3
 m2 = Menu.create :name => 'Homemade Bone Broth', :ingredients => 'Chicken bone broth slow cooked over 24 hours. This gut healing elixir contains collagen, glutamine, glycine and proline and is rich in minerals that support the immune system.', :price => '(S) $6.00 (L) $10.00', :size => 1, :weather => 1
 
