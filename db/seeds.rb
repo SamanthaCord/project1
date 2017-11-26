@@ -1,7 +1,7 @@
 User.destroy_all
 
-u1 = User.create :name => 'Sam', :email => 'sam@cordandberg.com'
-u2 = User.create :name => 'Rachel', :email => 'rachel@cordandberg.com'
+u1 = User.create :name => 'Sam', :email => 'sam@cordandberg.com', :password => 'chicken'
+u2 = User.create :name => 'Rachel', :email => 'rachel@cordandberg.com', :password => 'chicken'
 
 Benefit.destroy_all
 
