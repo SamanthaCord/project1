@@ -1,0 +1,10 @@
+<%= form_for @benefit do | f | %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true, :placeholder => 'Immunity' %>
+</fieldset>
+<label></label>
+<fieldset>
+  <%= f.submit "Add Item" %>
+</fieldset>
+<% end %>

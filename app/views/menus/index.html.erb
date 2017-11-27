@@ -7,17 +7,25 @@
     <li><%= menu.ingredients %></li>
     <li><%= menu.price %></li>
   </ul>
-  <% elsif menu.size == 2 %>
-  <ul>
-    <li><%= menu.name %></li>
-    <li><%= menu.ingredients %></li>
-    <li><%= menu.price %></li>
-  </ul>
-  <% elsif menu.size == 3 %>
-  <ul>
-    <li><%= menu.name %></li>
-    <li><%= menu.ingredients %></li>
-    <li><%= menu.price %></li>
-  </ul>
+  <% end %>
 <% end %>
+
+<% @menus.each do |menu| %>
+<% if menu.size == 2 %>
+  <ul>
+    <li><%= menu.name %></li>
+    <li><%= menu.ingredients %></li>
+    <li><%= menu.price %></li>
+  </ul>
+  <% end %>
+<% end %>
+
+<% @menus.each do |menu| %>
+<% if menu.size == 3 %>
+  <ul>
+    <li><%= menu.name %></li>
+    <li><%= menu.ingredients %></li>
+    <li><%= menu.price %></li>
+  </ul>
+  <% end %>
 <% end %>

@@ -1,0 +1,12 @@
+<h1>Update Health List</h1>
+
+<%= render :partial => 'form' %>
+
+<% @benefits.each do |benefit| %>
+  <ul>
+    <li><%= benefit.name %></li>
+    <div class="controls">
+      <%= link_to 'Edit', edit_benefit_path(benefit.id) %>
+    </div>
+  </ul>
+<% end %>
