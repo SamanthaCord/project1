@@ -1,11 +1,48 @@
 <h1>You searched for: <%= @benefit.name %></h1>
 
+
 <% @menus.each do |menu| %>
 <% @benefits = menu.benefit_ids %>
 <% end %>
 
-<% if @benefit.id == @benefits %>
 <% @menus.each do |menu| %>
-<!-- print only the menu option with that benefit id attached -->
+  <% menu.benefits.each do |benefit| %>
+    <% if @benefit.name == benefit.name %>
+      <% if menu.size == 1 %>
+        <ul>
+          <li><%= menu.name %></li>
+          <li><%= menu.ingredients %></li>
+          <li><%= menu.price %></li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>
+
+<% @menus.each do |menu| %>
+  <% menu.benefits.each do |benefit| %>
+    <% if @benefit.name == benefit.name %>
+      <% if menu.size == 2 %>
+        <ul>
+          <li><%= menu.name %></li>
+          <li><%= menu.ingredients %></li>
+          <li><%= menu.price %></li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% @menus.each do |menu| %>
+  <% menu.benefits.each do |benefit| %>
+    <% if @benefit.name == benefit.name %>
+      <% if menu.size == 3 %>
+        <ul>
+          <li><%= menu.name %></li>
+          <li><%= menu.ingredients %></li>
+          <li><%= menu.price %></li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>

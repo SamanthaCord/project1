@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def random
-    @menus = Menu.select('name').collect { |m| m.name }
+    @menus = Menu.all.pluck(:name, :ingredients, :price)
     @random_selection = @menus.sample
   end
 end
