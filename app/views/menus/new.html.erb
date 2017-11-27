@@ -8,24 +8,41 @@
     <li><%= menu.name %></li>
     <li><%= menu.ingredients %></li>
     <li><%= menu.price %></li>
+    <% menu.benefits.each do |b| %>
+    <%= b.name %>
+    <% end %>
     <div class="controls">
     <%= link_to 'Edit', edit_menu_path(menu.id) %>
   </div>
   </ul>
-  <% elsif menu.size == 2 %>
+  <% end %>
+  <% end %>
+
+  <% @menus.each do |menu| %>
+  <% if menu.size == 2 %>
   <ul>
     <li><%= menu.name %></li>
     <li><%= menu.ingredients %></li>
     <li><%= menu.price %></li>
+    <% menu.benefits.each do |b| %>
+    <%= b.name %>
+    <% end %>
     <div class="controls">
     <%= link_to 'Edit', edit_menu_path(menu.id) %>
     </div>
   </ul>
-  <% elsif menu.size == 3 %>
+  <% end %>
+  <% end %>
+
+  <% @menus.each do |menu| %>
+  <% if menu.size == 3 %>
   <ul>
     <li><%= menu.name %></li>
     <li><%= menu.ingredients %></li>
     <li><%= menu.price %></li>
+    <% menu.benefits.each do |b| %>
+    <%= b.name %>
+    <% end %>
     <div class="controls">
     <%= link_to 'Edit', edit_menu_path(menu.id) %>
     </div>

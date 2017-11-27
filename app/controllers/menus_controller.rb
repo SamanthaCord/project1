@@ -6,6 +6,7 @@ class MenusController < ApplicationController
   def new
     @menu = Menu.new
     @menus = Menu.all
+    @benefits = Benefit.all
   end
 
   def create
@@ -15,6 +16,7 @@ class MenusController < ApplicationController
 
   def edit
     @menu = Menu.find params[:id]
+    @benefits = Benefit.all
   end
 
   def update
@@ -31,6 +33,6 @@ class MenusController < ApplicationController
 
   private
   def menu_params
-    params.require(:menu).permit(:name, :ingredients, :price, :size, :weather)
+    params.require(:menu).permit(:name, :ingredients, :price, :size, :weather, :benefit_ids => [])
   end
 end

@@ -2,6 +2,6 @@
 
 <% @benefits.each do |benefit| %>
   <ul>
-    <li><%= benefit.name %></li>
+    <li><%= link_to benefit.name, benefit_path(benefit.id) %></li>
   </ul>
 <% end %>
