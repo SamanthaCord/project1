@@ -4,10 +4,8 @@
 <% @benefits = menu.benefit_ids %>
 <% end %>
 
+<% if @benefit.id == @benefits %>
 <% @menus.each do |menu| %>
-<% @benefits.each do | b | %>
-<% if b == @benefit.id %>
-<p>true</p>
-<% end %>
+<!-- print only the menu option with that benefit id attached -->
 <% end %>
 <% end %>

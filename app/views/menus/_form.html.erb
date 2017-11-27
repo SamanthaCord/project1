@@ -22,7 +22,7 @@
 </fieldset>
 <fieldset>
   <% @benefits.each do |benefit| %>
-      <%= check_box_tag "menu[benefit_ids][]", benefit.id, benefit.name %>
+      <%= check_box_tag("menu[benefit_ids][]", benefit.id, false) %>
       <%= f.label benefit.name %></br>
   <% end %>
 </fieldset>
