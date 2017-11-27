@@ -24,7 +24,6 @@
 <fieldset>
   <%= f.submit "Update Item" %>
 </fieldset>
-<fieldset>
-  <%= button_to 'Delete Item', @menu.id, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
-</fieldset>
 <% end %>
+
+<%= button_to 'Delete Item', @menu, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>

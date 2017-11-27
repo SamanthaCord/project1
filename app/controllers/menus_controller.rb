@@ -10,7 +10,7 @@ class MenusController < ApplicationController
 
   def create
     menu = Menu.create menu_params
-    redirect_to menus_new_path
+    redirect_to new_menu_path
   end
 
   def edit
@@ -20,13 +20,13 @@ class MenusController < ApplicationController
   def update
     menu = Menu.find params[:id]
     menu.update menu_params
-    redirect_to menus_new_path
+    redirect_to new_menu_path
   end
 
   def destroy
     menu = Menu.find params[:id]
     menu.destroy
-    redirect_to menus_new_path
+    redirect_to new_menu_path
   end
 
   private
