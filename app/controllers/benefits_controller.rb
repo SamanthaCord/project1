@@ -14,11 +14,22 @@ class BenefitsController < ApplicationController
   end
 
   def edit
-    benefit = Benefit.create benefit_params
+    @benefit = Benefit.find params[:id]
+  end
+
+  def update
+    benefit = Benefit.find params[:id]
+    benefit.update benefit_params
     redirect_to new_benefit_path
   end
 
   def show
+  end
+
+  def destroy
+    benefit = Benefit.find params[:id]
+    benefit.destroy
+    redirect_to new_benefit_path
   end
 
   private
