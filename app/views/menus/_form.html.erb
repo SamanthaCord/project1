@@ -1,0 +1,27 @@
+
+<%= form_for @menu do | f | %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true, :placeholder => 'Toast' %>
+</fieldset>
+<fieldset>
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients, :required => true, :placeholder => 'Description of item' %>
+</fieldset>
+<fieldset>
+  <%= f.label :price %>
+  <%= f.text_field :price, :required => true, :placeholder => '$20.00' %>
+</fieldset>
+<fieldset>
+  <%= f.label :size %>
+  <%= f.number_field :size, :required => true, :placeholder => '1 = Light, 2 = Main, 3 = Drink' %>
+</fieldset>
+<fieldset>
+  <%= f.label :weather %>
+  <%= f.number_field :weather, :required => true, :placeholder => '1 = Cold, 2 = Hot, 3 = Both' %>
+</fieldset>
+<label></label>
+<fieldset>
+  <%= f.submit "Add Item" %>
+</fieldset>
+<% end %>

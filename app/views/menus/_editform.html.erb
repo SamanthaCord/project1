@@ -1,0 +1,30 @@
+
+<%= form_for @menu do | f | %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name, :placeholder => 'Toast' %>
+</fieldset>
+<fieldset>
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients, :placeholder => 'Description of item' %>
+</fieldset>
+<fieldset>
+  <%= f.label :price %>
+  <%= f.text_field :price, :placeholder => '$20.00' %>
+</fieldset>
+<fieldset>
+  <%= f.label :size %>
+  <%= f.number_field :size, :placeholder => '1 = Light, 2 = Main, 3 = Drink' %>
+</fieldset>
+<fieldset>
+  <%= f.label :weather %>
+  <%= f.number_field :weather, :placeholder => '1 = Cold, 2 = Hot, 3 = Both' %>
+</fieldset>
+<label></label>
+<fieldset>
+  <%= f.submit "Update Item" %>
+</fieldset>
+<fieldset>
+  <%= button_to 'Delete Item', @menu.id, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</fieldset>
+<% end %>

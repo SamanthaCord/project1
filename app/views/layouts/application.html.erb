@@ -12,6 +12,11 @@
 
     <nav>
       <%= link_to 'BiteRite', root_path %>
+      <% if @current_user.present? %>
+        <%= link_to "Sign Out #{ @current_user.email }", login_path, :method => 'delete' %>
+      <% else %>
+        <%= link_to 'Sign In', login_path %>
+      <% end %>
     </nav>
 
     <%= yield %>
