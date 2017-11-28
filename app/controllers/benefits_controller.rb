@@ -26,6 +26,8 @@ class BenefitsController < ApplicationController
   def show
     @benefit = Benefit.find params[:id]
     @menus = Menu.all
+
+
   end
 
   def destroy

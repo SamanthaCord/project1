@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   get '/random' => 'pages#random'
+  get '/weathersearch' => 'pages#weathersearch'
 end

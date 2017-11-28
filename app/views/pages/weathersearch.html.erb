@@ -1,0 +1,96 @@
+<h1>It is currently <%= @current_temp %>°C</h1>
+
+
+<% if @current_temp >= 25 %>
+  <h1>It is warm out, cool down with these: </h1>
+  <% @menus.each do |menu| %>
+    <% if ((menu.weather == 1) && (menu.size == 1)) %>
+      <ul>
+        <li><%= menu.name %></li>
+        <li><%= menu.ingredients %></li>
+        <li><%= menu.price %></li>
+      </ul>
+      <% end %>
+  <% end %>
+  <% @menus.each do |menu| %>
+    <% if ((menu.weather == 1) && (menu.size == 2)) %>
+      <ul>
+        <li><%= menu.name %></li>
+        <li><%= menu.ingredients %></li>
+        <li><%= menu.price %></li>
+      </ul>
+      <% end %>
+  <% end %>
+  <% @menus.each do |menu| %>
+    <% if ((menu.weather == 1) && (menu.size == 3)) %>
+      <ul>
+        <li><%= menu.name %></li>
+        <li><%= menu.ingredients %></li>
+        <li><%= menu.price %></li>
+      </ul>
+      <% end %>
+  <% end %>
+<% end %>
+
+
+<% if ((@current_temp <= 25 && @current_temp >= 12)) %>
+  <h1>It's good weather for these: </h1>
+  <% @menus.each do |menu| %>
+  <% if ((menu.weather == 3) && (menu.size == 1)) %>
+    <ul>
+      <li><%= menu.name %></li>
+      <li><%= menu.ingredients %></li>
+      <li><%= menu.price %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% @menus.each do |menu| %>
+  <% if ((menu.weather == 3) && (menu.size == 2)) %>
+    <ul>
+      <li><%= menu.name %></li>
+      <li><%= menu.ingredients %></li>
+      <li><%= menu.price %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% @menus.each do |menu| %>
+  <% if ((menu.weather == 3) && (menu.size == 3)) %>
+    <ul>
+      <li><%= menu.name %></li>
+      <li><%= menu.ingredients %></li>
+      <li><%= menu.price %></li>
+    </ul>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% if @current_temp < 12 %>
+  <h1>It is cold out, warm up with these: </h1>
+  <% @menus.each do |menu| %>
+  <% if ((menu.weather == 2) && (menu.size == 1)) %>
+    <ul>
+      <li><%= menu.name %></li>
+      <li><%= menu.ingredients %></li>
+      <li><%= menu.price %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% @menus.each do |menu| %>
+  <% if ((menu.weather == 2) && (menu.size == 2)) %>
+    <ul>
+      <li><%= menu.name %></li>
+      <li><%= menu.ingredients %></li>
+      <li><%= menu.price %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% @menus.each do |menu| %>
+  <% if ((menu.weather == 2) && (menu.size == 3)) %>
+    <ul>
+      <li><%= menu.name %></li>
+      <li><%= menu.ingredients %></li>
+      <li><%= menu.price %></li>
+    </ul>
+    <% end %>
+  <% end %>
+<% end %>
