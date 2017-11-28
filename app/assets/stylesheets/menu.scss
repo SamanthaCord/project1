@@ -2,6 +2,7 @@
 
 body {
   background-color: #333229;
+  font-family: 'Rubik', sans-serif;
   color: white;
 }
 
@@ -115,6 +116,31 @@ body {
   border-bottom: solid white 3px;
 }
 
+.navbar.navbar-default.navbar-fixed-bottom {
+  background-color: white;
+  border: none;
+}
+
+.footeritem {
+  font-size: 15px;
+  display: inline-block;
+  text-align: right;
+  padding: 7px;
+  color: #333229;
+  font-weight: 400;
+}
+
+#footerlink {
+  font-size: 15px;
+  display: inline-block;
+  // text-align: center;
+  font-weight: bold;
+  color: #333229;
+}
+
+#copyright {
+  padding-right: 690px;
+}
 
 /////////////////////////NEW MENU STYLING///////////////////////////
 
