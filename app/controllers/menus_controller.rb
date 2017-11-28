@@ -11,6 +11,7 @@ class MenusController < ApplicationController
 
   def create
     menu = Menu.create menu_params
+    @selected_benefits = params[:benefit_ids => [] ]
     redirect_to new_menu_path
   end
 

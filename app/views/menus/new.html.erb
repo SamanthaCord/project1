@@ -9,7 +9,9 @@
     <li><%= menu.ingredients %></li>
     <li><%= menu.price %></li>
     <% menu.benefits.each do |b| %>
-    <%= b.name %>
+      <ul>
+        <li><%= b.name %></li>
+      </ul>
     <% end %>
     <div class="controls">
     <%= link_to 'Edit', edit_menu_path(menu.id) %>
@@ -25,7 +27,9 @@
     <li><%= menu.ingredients %></li>
     <li><%= menu.price %></li>
     <% menu.benefits.each do |b| %>
-    <%= b.name %>
+    <ul>
+      <li><%= b.name %></li>
+    </ul>
     <% end %>
     <div class="controls">
     <%= link_to 'Edit', edit_menu_path(menu.id) %>
@@ -41,7 +45,9 @@
     <li><%= menu.ingredients %></li>
     <li><%= menu.price %></li>
     <% menu.benefits.each do |b| %>
-    <%= b.name %>
+    <ul>
+      <li><%= b.name %></li>
+    </ul>
     <% end %>
     <div class="controls">
     <%= link_to 'Edit', edit_menu_path(menu.id) %>

@@ -21,10 +21,15 @@
   <%= f.number_field :weather, :required => true, :placeholder => '1 = Cold, 2 = Hot, 3 = Both' %>
 </fieldset>
 <fieldset>
-  <% @benefits.each do |benefit| %>
-      <%= check_box_tag("menu[benefit_ids][]", benefit.id, false) %>
-      <%= f.label benefit.name %></br>
-  <% end %>
+    <ul class="checkbox">
+      <%= f.label "Benefits" %>
+      <%= f.collection_check_boxes :benefit_ids, @benefits, :id, :name do |b| %>
+        <li>
+          <%= b.check_box %>
+          <%= b.label %>
+        </li>
+      <% end %>
+    </ul>
 </fieldset>
 <label></label>
 <fieldset>
