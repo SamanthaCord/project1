@@ -156,6 +156,18 @@ html {
 
 ///////////////////////////////RANDOM PAGE STYLING/////////////////////////////
 
+.benefitpageheading {
+  font-family: 'Rubik', sans-serif;
+  font-size: 29px;
+  max-width: 741px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #333229;
+  margin-top: 21px;
+  margin-bottom: 40px;
+  margin-left: 385px;
+}
+
 .randomsubheading {
   font-family: 'Rubik', sans-serif;
   font-size: 38px;
@@ -165,7 +177,7 @@ html {
   list-style: none;
   text-align: left;
   max-width: 800px;
-  margin-left: 500px;
+  margin-left: 385px;
 }
 
 .col-md-4.col-md-offset-0 {
@@ -183,21 +195,23 @@ html {
   list-style: none;
   text-align: left;
   max-width: 800px;
-  margin-left: 500px;
+  margin-left: 365px;
   margin-bottom: 50px;
   margin-top: 38px;
 }
 
-.fa {
-  margin-left: 500px;
+.fa.fa-thermometer-quarter.fa-4x {
+  margin-left: 365px;
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 7px;
 }
 
 .weatherfineprint {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
   color: #333229;
-  margin-left: 10px;
-  padding-top: 15px;
+  margin-left: 365px;
   margin-top: 0;
   width: 166px;
   line-height: 1.4;

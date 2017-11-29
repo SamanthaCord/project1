@@ -5,10 +5,6 @@
 //   border: green 1px solid;
 // }
 
-#benefitmain {
-    transition: margin-left .5s;
-    margin-top: -38px;
-}
 
 .benefitpageheading {
   font-family: 'Rubik', sans-serif;
@@ -73,9 +69,9 @@
   list-style: none;
   text-align: left;
   max-width: 800px;
-  margin-left: 500px;
+  margin-left: 361px;
   margin-bottom: 50px;
-  margin-top: 38px;
+  margin-top: 13px;
 }
 
 .resultsubheading {
@@ -87,5 +83,13 @@
   color: #333229;
   margin-top: 31px;
   margin-bottom: 40px;
-  margin-left: 493px;
+  margin-left: 364px;
+}
+
+.resultscounternote {
+  font-size: 18px;
+  color: #333229;
+  font-family: 'Rubik', sans-serif;
+  margin-top: -50px;
+  min-width: 250px;
 }

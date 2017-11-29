@@ -1,26 +1,25 @@
-<div class="col-md-4 col-md-offset-0">
-<div class="sidebar">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"></span>
+  <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
 
-  <div class="col-md-7 col-md-offset-0">
-    <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-    <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+  <div id="mySidenav" class="sidenav">
+    <span style="font-size:59px;cursor:pointer" onclick="closeNav()" class="closebtn">&times;</span>
 
-    <a href="/menus" class="sidenav" id="firstitem">See Full Menu</a>
-    <h3 class="or-text">OR</h3>
-    <a href="/benefits" class="sidenav">Choose by problem area</a>
-    <a href="/random" class="sidenav">Choose for me</a>
-    <a href="/weathersearch" class="sidenav">Choose by weather</a>
+        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
 
+        <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
+        <h3 class="or-text">OR</h3>
+        <a href="/benefits" class="navitem">Choose by problem area</a>
+        <a href="/random" class="navitem">Choose for me</a>
+        <a href="/weathersearch" class="navitem">Choose by weather</a>
+</div>
+
+  <div class="col-md-3 col-md-offset-9">
+    <h3  class="resultscounternote">*Please order at the counter.</h3>
   </div>
-</div>
-</div>
 
 <body class="menubody">
-  <div class="col-md-3 col-md-offset-9">
-    <h3  class="counternote">*Please order at the counter.</h3>
-  </div>
-
-<i class="fa fa-thermometer-quarter fa-3x"></i>
+<p class="fa fa-thermometer-quarter fa-4x"></p>
 <h1 class="weatherfineprint">It is currently <%= @current_temp %>°C</h1>
 
 <% if @current_temp >= 25 %>
@@ -28,7 +27,7 @@
   <% @menus.each do |menu| %>
     <% if ((menu.weather == 1) && (menu.size == 1)) %>
       <ul>
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
           <li class="menulist"><%= menu.ingredients %></li>
         </div>
@@ -38,7 +37,7 @@
   <% @menus.each do |menu| %>
     <% if ((menu.weather == 1) && (menu.size == 2)) %>
       <ul>
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
           <li class="menulist"><%= menu.ingredients %></li>
         </div>
@@ -48,7 +47,7 @@
   <% @menus.each do |menu| %>
     <% if ((menu.weather == 1) && (menu.size == 3)) %>
       <ul>
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
           <li class="menulist"><%= menu.ingredients %></li>
         </div>
@@ -59,66 +58,73 @@
 
 
 <% if ((@current_temp <= 25 && @current_temp >= 12)) %>
-  <h1>It's good weather for these: </h1>
+  <h1 class="weathersubheading">It's good weather for these: </h1>
   <% @menus.each do |menu| %>
   <% if ((menu.weather == 3) && (menu.size == 1)) %>
     <ul>
-      <li><%= menu.name %></li>
-      <li><%= menu.ingredients %></li>
-      <li><%= menu.price %></li>
+      <div class="col-md-7 col-md-offset-3">
+        <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+        <li class="menulist"><%= menu.ingredients %></li>
+      </div>
     </ul>
     <% end %>
   <% end %>
   <% @menus.each do |menu| %>
   <% if ((menu.weather == 3) && (menu.size == 2)) %>
     <ul>
-      <li><%= menu.name %></li>
-      <li><%= menu.ingredients %></li>
-      <li><%= menu.price %></li>
+      <div class="col-md-7 col-md-offset-3">
+        <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+        <li class="menulist"><%= menu.ingredients %></li>
+      </div>
     </ul>
     <% end %>
   <% end %>
   <% @menus.each do |menu| %>
   <% if ((menu.weather == 3) && (menu.size == 3)) %>
     <ul>
-      <li><%= menu.name %></li>
-      <li><%= menu.ingredients %></li>
-      <li><%= menu.price %></li>
+      <div class="col-md-7 col-md-offset-3">
+        <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+        <li class="menulist"><%= menu.ingredients %></li>
+      </div>
     </ul>
     <% end %>
   <% end %>
 <% end %>
 
 <% if @current_temp < 12 %>
-  <h1>It is cold out, warm up with these: </h1>
+  <h1 class="weathersubheading">It is cold out, warm up with these: </h1>
   <% @menus.each do |menu| %>
   <% if ((menu.weather == 2) && (menu.size == 1)) %>
     <ul>
-      <li><%= menu.name %></li>
-      <li><%= menu.ingredients %></li>
-      <li><%= menu.price %></li>
+      <div class="col-md-7 col-md-offset-3">
+        <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+        <li class="menulist"><%= menu.ingredients %></li>
+      </div>
     </ul>
     <% end %>
   <% end %>
   <% @menus.each do |menu| %>
   <% if ((menu.weather == 2) && (menu.size == 2)) %>
     <ul>
-      <li><%= menu.name %></li>
-      <li><%= menu.ingredients %></li>
-      <li><%= menu.price %></li>
+      <div class="col-md-7 col-md-offset-3">
+        <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+        <li class="menulist"><%= menu.ingredients %></li>
+      </div>
     </ul>
     <% end %>
   <% end %>
   <% @menus.each do |menu| %>
   <% if ((menu.weather == 2) && (menu.size == 3)) %>
     <ul>
-      <li><%= menu.name %></li>
-      <li><%= menu.ingredients %></li>
-      <li><%= menu.price %></li>
+      <div class="col-md-7 col-md-offset-3">
+        <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+        <li class="menulist"><%= menu.ingredients %></li>
+      </div>
     </ul>
     <% end %>
   <% end %>
 <% end %>
+
 
 <footer class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
@@ -127,5 +133,17 @@
     <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
   </div>
 </footer>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
 
 </body>
