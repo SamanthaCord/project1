@@ -1,33 +1,34 @@
-<div class="col-md-4 col-md-offset-0">
-<div class="sidebar">
-  <div class="col-md-7 col-md-offset-0">
-    <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-    <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"</span>
+  <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
 
-    <a href="/menus" class="sidenav" id="firstitem">See Full Menu</a>
-    <h3 class="or-text">OR</h3>
-    <a href="/benefits" class="sidenav">Choose by problem area</a>
-    <a href="/random" class="sidenav">Choose for me</a>
-    <a href="/weathersearch" class="sidenav">Choose by weather</a>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-  </div>
+        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+
+        <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
+        <h3 class="or-text">OR</h3>
+        <a href="/benefits" class="navitem">Choose by problem area</a>
+        <a href="/random" class="navitem">Choose for me</a>
+        <a href="/weathersearch" class="navitem">Choose by weather</a>
 </div>
-</div>
 
+<div id="main">
 <body class="menubody">
   <div class="col-md-3 col-md-offset-9">
     <h3  class="counternote">*Please order at the counter.</h3>
   </div>
 
   <div class="row">
-    <div class="col-md-5 col-md-offset-4">
+    <div class="col-md-5 col-md-offset-3">
       <h1 class="pageheading">ALL DAY MENU</h1>
       <h2 class="pagesubheading">SOMETHING LIGHT</h2>
     </div>
       <% @menus.each do |menu| %>
       <% if menu.size == 1 %>
         <ul>
-    <div class="col-md-6 col-md-offset-4">
+    <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
           <li class="menulist"><%= menu.ingredients %></li>
     </div>
@@ -37,13 +38,13 @@
   </div>
 
   <div class="row">
-    <div class="col-md-5 col-md-offset-4">
+    <div class="col-md-5 col-md-offset-3">
       <h2 class="pagesubheading">I'M HUNGRY</h2>
     </div>
       <% @menus.each do |menu| %>
       <% if menu.size == 2 %>
         <ul>
-    <div class="col-md-6 col-md-offset-4">
+    <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
           <li class="menulist"><%= menu.ingredients %></li>
     </div>
@@ -53,13 +54,13 @@
   </div>
 
   <div class="row">
-    <div class="col-md-5 col-md-offset-4">
+    <div class="col-md-5 col-md-offset-3">
       <h2 class="pagesubheading">DRINKS</h2>
     </div>
       <% @menus.each do |menu| %>
       <% if menu.size == 3 %>
         <ul>
-    <div class="col-md-6 col-md-offset-4">
+    <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
           <li class="menulist"><%= menu.ingredients %></li>
     </div>
@@ -67,6 +68,7 @@
         <% end %>
       <% end %>
   </div>
+</div>
 
   <footer class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
@@ -75,5 +77,17 @@
       <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
     </div>
   </footer>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+  </script>
 
 </body>

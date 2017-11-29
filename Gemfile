@@ -35,6 +35,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'httparty'
 gem 'font-awesome-sass'
+gem 'rails_real_favicon'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

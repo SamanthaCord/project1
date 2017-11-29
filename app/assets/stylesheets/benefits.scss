@@ -5,6 +5,11 @@
 //   border: green 1px solid;
 // }
 
+#benefitmain {
+    transition: margin-left .5s;
+    margin-top: -38px;
+}
+
 .benefitpageheading {
   font-family: 'Rubik', sans-serif;
   font-size: 29px;
@@ -12,9 +17,9 @@
   line-height: 1.4;
   font-weight: 500;
   color: #333229;
-  margin-top: 31px;
+  margin-top: 21px;
   margin-bottom: 40px;
-  margin-left: 493px;
+  margin-left: 430px;
 }
 
 .benefitsubheading {
@@ -32,7 +37,7 @@
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
   color: #333229;
-  margin-left: 500px;
+  margin-left: 432px;
   padding-top: 50px;
   margin-top: 0;
   width: 166px;
