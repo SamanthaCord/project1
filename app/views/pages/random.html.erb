@@ -16,10 +16,12 @@
 </div>
 
 <body class="menubody">
-<h1>We see you're a wild one. Try this:</h1>
+  <div class="col-md-3 col-md-offset-9">
+    <h3  class="counternote">*Please order at the counter.</h3>
+  </div>
 
-<h1><%= @random_selection.join(", ") %></h1>
-
+  <h1 class="benefitpageheading">We see you're a wild one. Try this:</h1>
+  <h1 class="randomsubheading"><%= @random_selection.join(", ") %></h1>
 
 <footer class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">

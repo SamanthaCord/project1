@@ -1,152 +1,3 @@
-/////////////////////////HOME STYLING///////////////////////////
-
-html {
-  margin-top: 0;
-  padding: 0;
-}
-
-.homebody {
-  background-color: #333229;
-  font-family: 'Rubik', sans-serif;
-  color: white;
-}
-
-.logo {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-  color: white;
-  text-align: left;
-  margin-bottom: 0;
-  margin-left: 14px;
-  margin-top: 43px;
-}
-
-.logo:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.tagline {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
-  color: #F5F7FB;
-  text-align: left;
-  margin: 0;
-  margin-left: 27px;
-}
-
-.tagline:hover {
-  color: white;
-  text-decoration: none;
-}
-
-#top, #bottom, #left, #right {
-	background: white;
-	position: fixed;
-	}
-
-#left, #right {
-	top: 0; bottom: 0;
-	width: 30px;
-	}
-
-#left { left: 0; }
-#right { right: 0; }
-
-#top, #bottom {
-	left: 0; right: 0;
-	height: 30px;
-	}
-
-#top { top: 0; }
-
-#bottom { bottom: 0; }
-
-.orderheading {
-  font-family: 'Rubik', sans-serif;
-  font-size: 50px;
-  color: white;
-  margin-top: 0;
-}
-
-.welcome {
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  color: white;
-  margin-top: 132px;
-}
-
-.welcomecontainer {
-  margin: 40px;
-}
-
-.mainbuttons {
-  display: inline-block;
-  width: 311px;
-  height: 159px;
-  font-family: 'Rubik', sans-serif;
-  background-color: #2dec9d;
-  border-width: 10px;
-  border-color: white;
-  border-style: solid;
-  margin: 40px;
-}
-
-.mainbuttons:hover {
-  background-color: #333229;
-}
-
-.mainbuttons a {
-  color: white;
-  font-size: 44px;
-  line-height: 1;
-}
-
-.mainbuttons a:hover {
-  text-decoration: none;
-}
-
-.temperaturelink {
-  font-family: 'Rubik', sans-serif;
-  font-size: 22px;
-  color: white;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.temperaturelink:hover {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  border-bottom: solid white 3px;
-}
-
-#homefooter {
-  background-color: white;
-  border: none;
-}
-
-.homefooteritem {
-  font-size: 15px;
-  display: inline-block;
-  text-align: right;
-  padding: 7px;
-  color: #333229;
-  font-weight: 400;
-}
-
-#homefooterlink {
-  font-size: 15px;
-  display: inline-block;
-  // text-align: center;
-  font-weight: bold;
-  color: #333229;
-}
-
-#homecopyright {
-  padding-right: 690px;
-}
 
 /////////////////////////MENU ALL STYLING///////////////////////////
 
@@ -226,6 +77,7 @@ a.sidenav:hover {
   background-color: white;
   color: #333229;
   font-family: 'Rubik', sans-serif;
+  margin-bottom: 120px;
 }
 
 .counternote {
@@ -284,6 +136,7 @@ span.menuprice {
 .navbar.navbar-default.navbar-fixed-bottom {
   background-color: #333229;
   border: none;
+  margin-top: 50px;
 }
 
 .footeritem {

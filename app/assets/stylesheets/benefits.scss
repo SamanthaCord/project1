@@ -49,18 +49,26 @@
   max-width: 904px;
   margin-left: 338px;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 #HIDESCROLL {
   overflow: hidden;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
-}
 
-::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    background-color: #333229;
+///////////////////////////BENEFITS RESULTS PAGE//////////////////////////////
+
+.resultsheading {
+  font-family: 'Rubik', sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #2dec9d;
+  padding-right: 0;
+  list-style: none;
+  text-align: left;
+  max-width: 800px;
+  margin-left: 500px;
+  margin-bottom: 50px;
+  margin-top: 38px;
 }
