@@ -22,11 +22,10 @@
 
   <h1 class="resultsheading">You searched for: <%= @benefit.name %></h1>
 
+  <h3 class="resultsubheading">We make most things in house, including our raw Vegan, sugar free, gluten free sweet cabinet. We do this to maximise the natural healing properties in each of our ingredients, keep out the nasties and delight with tasty dishes. </h3>
 
-  <div class="row">
-    <div class="col-md-5 col-md-offset-4">
-      <h2 class="pagesubheading">SOMETHING LIGHT</h2>
-    </div>
+  <h3 class="resultsubheading">To assist with <%= @benefit.name %>, we recommend: </h3>
+
     <% @menus.each do |menu| %>
       <% menu.benefits.each do |benefit| %>
         <% if @benefit.name == benefit.name %>
@@ -43,10 +42,6 @@
     <% end %>
 </div>
 
-  <div class="row">
-    <div class="col-md-5 col-md-offset-4">
-      <h2 class="pagesubheading">I'M HUNGRY</h2>
-    </div>
   <% @menus.each do |menu| %>
     <% menu.benefits.each do |benefit| %>
       <% if @benefit.name == benefit.name %>
@@ -63,10 +58,6 @@
   <% end %>
 </div>
 
-  <div class="row">
-    <div class="col-md-5 col-md-offset-4">
-      <h2 class="pagesubheading">DRINKS</h2>
-    </div>
     <% @menus.each do |menu| %>
       <% menu.benefits.each do |benefit| %>
         <% if @benefit.name == benefit.name %>
