@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+  before_action :check_if_logged_in, :only => [:dashboard]
+
   def home
   end
 
@@ -13,4 +16,8 @@ class PagesController < ApplicationController
     @info = HTTParty.get(url);
     @current_temp = @info['main']['temp'].to_i / 10
   end
+
+  def dashboard
+  end
+
 end

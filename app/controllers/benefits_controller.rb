@@ -1,4 +1,7 @@
 class BenefitsController < ApplicationController
+
+  before_action :check_if_logged_in, :only => [:new, :edit]
+
   def index
     @benefits = Benefit.all
   end

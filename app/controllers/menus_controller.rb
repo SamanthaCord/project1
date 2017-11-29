@@ -1,4 +1,7 @@
 class MenusController < ApplicationController
+
+  before_action :check_if_logged_in, :only => [:new, :edit]
+  
   def index
     @menus = Menu.all
   end

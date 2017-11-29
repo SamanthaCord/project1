@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get '/random' => 'pages#random'
   get '/weathersearch' => 'pages#weathersearch'
+  get '/dashboard' => 'pages#dashboard'
 end
