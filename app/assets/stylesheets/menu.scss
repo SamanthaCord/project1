@@ -1,5 +1,10 @@
 /////////////////////////HOME STYLING///////////////////////////
 
+html {
+  margin-top: 0;
+  padding: 0;
+}
+
 .homebody {
   background-color: #333229;
   font-family: 'Rubik', sans-serif;
@@ -149,7 +154,8 @@
   background-color: #333229;
   display: inline-block;
   height: 100vh;
-  // min-width: 21vw;
+  margin: 0;
+  padding: 0;
   position: fixed;
 }
 
@@ -272,6 +278,8 @@ span.menuprice {
   margin: 3px;
   margin-bottom: 25px;
 }
+
+/////////////////////////////////FOOTER//////////////////////////////////////
 
 .navbar.navbar-default.navbar-fixed-bottom {
   background-color: #333229;

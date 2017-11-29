@@ -1,3 +1,66 @@
-// Place all the styles related to the Benefits controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/////////////////////////////////BENEFITS DIFFERENT STYLING//////////////////////////////////////
+
+// * {
+//   border: green 1px solid;
+// }
+
+.benefitpageheading {
+  font-family: 'Rubik', sans-serif;
+  font-size: 29px;
+  max-width: 741px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #333229;
+  margin-top: 31px;
+  margin-bottom: 40px;
+  margin-left: 493px;
+}
+
+.benefitsubheading {
+  font-family: 'Rubik', sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #2dec9d;
+  padding-right: 0;
+  list-style: none;
+  max-width: 500px;
+  text-align: center;
+}
+
+.fineprint {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  color: #333229;
+  margin-left: 500px;
+  padding-top: 50px;
+  margin-top: 0;
+  width: 166px;
+  line-height: 1.4;
+}
+
+.benefitsubheading:hover {
+  text-decoration: none;
+  color: #333229;
+}
+
+.benefitlist {
+  max-height: 500px;
+  max-width: 904px;
+  margin-left: 338px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#HIDESCROLL {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: #333229;
+}
