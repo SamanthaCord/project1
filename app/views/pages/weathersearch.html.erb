@@ -25,7 +25,7 @@
 <% if @current_temp >= 25 %>
   <h1 class="weathersubheading">It is warm out, cool down with these: </h1>
   <% @menus.each do |menu| %>
-    <% if ((menu.weather == 1) && (menu.size == 1)) %>
+    <% if ((menu.weather == 2) && (menu.size == 1)) %>
       <ul>
         <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
@@ -35,7 +35,7 @@
       <% end %>
   <% end %>
   <% @menus.each do |menu| %>
-    <% if ((menu.weather == 1) && (menu.size == 2)) %>
+    <% if ((menu.weather == 2) && (menu.size == 2)) %>
       <ul>
         <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
@@ -45,7 +45,7 @@
       <% end %>
   <% end %>
   <% @menus.each do |menu| %>
-    <% if ((menu.weather == 1) && (menu.size == 3)) %>
+    <% if ((menu.weather == 2) && (menu.size == 3)) %>
       <ul>
         <div class="col-md-7 col-md-offset-3">
           <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
@@ -94,7 +94,7 @@
 <% if @current_temp < 12 %>
   <h1 class="weathersubheading">It is cold out, warm up with these: </h1>
   <% @menus.each do |menu| %>
-  <% if ((menu.weather == 2) && (menu.size == 1)) %>
+  <% if ((menu.weather == 1) && (menu.size == 1)) %>
     <ul>
       <div class="col-md-7 col-md-offset-3">
         <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
@@ -104,7 +104,7 @@
     <% end %>
   <% end %>
   <% @menus.each do |menu| %>
-  <% if ((menu.weather == 2) && (menu.size == 2)) %>
+  <% if ((menu.weather == 1) && (menu.size == 2)) %>
     <ul>
       <div class="col-md-7 col-md-offset-3">
         <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
@@ -114,7 +114,7 @@
     <% end %>
   <% end %>
   <% @menus.each do |menu| %>
-  <% if ((menu.weather == 2) && (menu.size == 3)) %>
+  <% if ((menu.weather == 1) && (menu.size == 3)) %>
     <ul>
       <div class="col-md-7 col-md-offset-3">
         <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
@@ -130,7 +130,12 @@
   <div class="container">
     <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
     <h3 class="footeritem">Developed by <a href="https://www.linkedin.com/in/samantha-cordingley-8346ba1a/" class="footeritem" id="footerlink" target="_blank">Coda</a></h3>
-    <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+
+    <% if session[:user_id].present? %>
+      <h3 class="footeritem"><%= link_to "Log in as Admin", dashboard_path, :class => "footeritem", :id => "footerlink" %></h3>
+    <% else %>
+        <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+    <% end %>
   </div>
 </footer>
 

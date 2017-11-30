@@ -27,7 +27,12 @@
   <div class="container">
     <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
     <h3 class="footeritem">Developed by <a href="https://www.linkedin.com/in/samantha-cordingley-8346ba1a/" class="footeritem" id="footerlink" target="_blank">Coda</a></h3>
-    <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+
+    <% if session[:user_id].present? %>
+      <h3 class="footeritem"><%= link_to "Log in as Admin", dashboard_path, :class => "footeritem", :id => "footerlink" %></h3>
+    <% else %>
+        <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+    <% end %>
   </div>
 </footer>
 
