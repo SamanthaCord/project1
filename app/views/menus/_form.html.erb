@@ -2,11 +2,11 @@
 <%= form_for @menu do | f | %>
 <fieldset>
   <%= f.label :name %>
-  <%= f.text_field :name, :required => true, :placeholder => 'Toast' %>
+  <%= f.text_field :name, :required => true, :placeholder => 'Name  Eg.  Toast' %>
 </fieldset>
 <fieldset>
   <%= f.label :ingredients %>
-  <%= f.text_field :ingredients, :required => true, :placeholder => 'Description of item' %>
+  <%= f.text_field :ingredients, :required => true, :placeholder => 'Description  of  item' %>
 </fieldset>
 <fieldset>
   <%= f.label :price %>
@@ -14,17 +14,17 @@
 </fieldset>
 <fieldset>
   <%= f.label :size %>
-  <%= f.number_field :size, :required => true, :placeholder => '1 = Light, 2 = Main, 3 = Drink' %>
+  <%= f.number_field :size, :required => true, :placeholder => '1 = Light,  2 = Main,  3 = Drink' %>
 </fieldset>
 <fieldset>
   <%= f.label :weather %>
-  <%= f.number_field :weather, :required => true, :placeholder => '1 = Cold, 2 = Hot, 3 = Both' %>
+  <%= f.number_field :weather, :required => true, :placeholder => '1 = Cold,  2 = Hot,  3 = Both' %>
 </fieldset>
 <fieldset>
     <ul class="checkbox">
-      <%= f.label "Benefits" %>
+      <%= f.label "Benefits", :class => "benefitlabel"  %>
       <%= f.collection_check_boxes :benefit_ids, @benefits, :id, :name do |b| %>
-        <li>
+        <li class="benefitsublabels">
           <%= b.check_box %>
           <%= b.label %>
         </li>
@@ -33,6 +33,6 @@
 </fieldset>
 <label></label>
 <fieldset>
-  <%= f.submit "Add Item" %>
+  <%= f.submit "Add Item", :class => 'addbutton' %>
 </fieldset>
 <% end %>
