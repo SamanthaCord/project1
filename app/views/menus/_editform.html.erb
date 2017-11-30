@@ -2,11 +2,11 @@
 <%= form_for @menu do | f | %>
 <fieldset>
   <%= f.label :name %>
-  <%= f.text_field :name, :placeholder => 'Toast' %>
+  <%= f.text_field :name, :placeholder => 'Name  Eg.  Toast' %>
 </fieldset>
 <fieldset>
   <%= f.label :ingredients %>
-  <%= f.text_field :ingredients, :placeholder => 'Description of item' %>
+  <%= f.text_field :ingredients, :placeholder => 'Description  of  item' %>
 </fieldset>
 <fieldset>
   <%= f.label :price %>
@@ -14,17 +14,17 @@
 </fieldset>
 <fieldset>
   <%= f.label :size %>
-  <%= f.number_field :size, :placeholder => '1 = Light, 2 = Main, 3 = Drink' %>
+  <%= f.number_field :size, :placeholder => '1 = Light,   2 = Main,   3 = Drink' %>
 </fieldset>
 <fieldset>
   <%= f.label :weather %>
-  <%= f.number_field :weather, :placeholder => '1 = Cold, 2 = Hot, 3 = Both' %>
+  <%= f.number_field :weather, :placeholder => "Eat when 1 = It's cold,  2 = It's hot,  3 = Both" %>
 </fieldset>
 <fieldset>
   <ul class="checkbox">
-    <%= f.label "Benefits" %>
+    <%= f.label "Benefits", :class => "benefitlabel" %>
     <%= f.collection_check_boxes :benefit_ids, @benefits, :id, :name do |b| %>
-      <li>
+      <li class="benefitsublabels">
         <%= b.check_box %>
         <%= b.label %>
       </li>
@@ -33,8 +33,8 @@
 </fieldset>
 <label></label>
 <fieldset>
-  <%= f.submit "Update Item" %>
+  <%= f.submit "Update Item", :class => 'updatebutton' %>
 </fieldset>
 <% end %>
 
-<%= button_to 'Delete Item', @menu, :method => 'delete', :data => { :confirm => 'Are you sure? This item will be deleted forever'} %>
+<%= button_to 'Delete Item', @menu, :method => 'delete', :class => 'deletebutton', :data => { :confirm => 'Are you sure? This item will be deleted forever'} %>

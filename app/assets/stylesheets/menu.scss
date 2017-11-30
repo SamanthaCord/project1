@@ -391,3 +391,35 @@ a.editbutton {
   text-decoration: none;
   color: black;
 }
+
+///////////////////////////UPDATE MENU ITEM PAGE//////////////////////////////
+
+input.updatebutton {
+  font-family: 'Rubik', sans-serif;
+  font-size: 33px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #0bf39f;
+  border: none;
+  padding: 7px;
+  list-style: none;
+  width: 288px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 75px;
+}
+
+input.deletebutton {
+  font-family: 'Rubik', sans-serif;
+  font-size: 33px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #f44336;
+  border: none;
+  padding: 7px;
+  list-style: none;
+  width: 288px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 75px;
+}
