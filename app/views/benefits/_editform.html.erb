@@ -5,8 +5,8 @@
 </fieldset>
 <label></label>
 <fieldset>
-  <%= f.submit "Update Item" %>
+  <%= f.submit "Update Item", :class => 'updatebutton' %>
 </fieldset>
 <% end %>
 
-<%= button_to 'Delete Item', @benefit, :method => 'delete', :data => { :confirm => 'Are you sure? This item will be deleted forever'} %>
+<%= button_to 'Delete Item', @benefit, :method => 'delete', :class => 'deletebutton', :data => { :confirm => 'Are you sure? This item will be deleted forever'} %>
