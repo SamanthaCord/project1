@@ -1,13 +1,27 @@
-<h1>Admin Log In</h1>
 
-<%= flash[:error] %>
+<div class="row" id="logincontainer">
+  <div class="col-md-8 col-md-offset-2">
+    <h1 class="loginlogo"><%= link_to 'BR', root_path, :class => "loginlogo" %></h1>
+    <h1 class="loginheading">Admin Log In</h1>
+  </br>
+    <%= flash[:error] %>
 
-<%= form_tag login_path do %>
-<%= label_tag :email %>
-<%= email_field_tag :email %>
+    <%= form_tag login_path, :class => 'loginform' do %>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %>
+  </br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+  </br>
+      <%= submit_tag "ENTER", :class => 'loginbutton' %>
+    <% end %>
+  </div>
+</div>
 
-<%= label_tag :password %>
-<%= password_field_tag :password %>
-
-<%= submit_tag "Login" %>
-<% end %>
+<footer class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
+    <h3 class="footeritem">Developed by <a href="https://www.linkedin.com/in/samantha-cordingley-8346ba1a/" class="footeritem" id="footerlink" target="_blank">Coda</a></h3>
+    <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+  </div>
+</footer>
