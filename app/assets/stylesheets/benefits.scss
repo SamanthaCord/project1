@@ -1,10 +1,17 @@
 
-/////////////////////////////////BENEFITS DIFFERENT STYLING//////////////////////////////////////
+                          /*CHECK MENU SCSS FIRST FOR MASTER STYLING*/
+/////////////////////////////////BENEFITS ADDITIONAL STYLING//////////////////////////////////////
 
+//TESTING
 // * {
 //   border: green 1px solid;
 // }
 
+//////////////////////////////PUBLIC BENEFIT PAGES////////////////////////
+
+//////////////////////////BENEFITS INDEX PAGE///////////////////////////
+
+// Large block of heading text
 
 .benefitpageheading {
   font-family: 'Rubik', sans-serif;
@@ -18,6 +25,8 @@
   margin-left: 432px;
 }
 
+// List of benefits in green
+
 .benefitsubheading {
   font-family: 'Rubik', sans-serif;
   font-size: 38px;
@@ -28,6 +37,13 @@
   max-width: 500px;
   text-align: center;
 }
+
+.benefitsubheading:hover {
+  text-decoration: none;
+  color: #333229;
+}
+
+//Small print block of text
 
 .fineprint {
   font-family: 'Rubik', sans-serif;
@@ -40,10 +56,7 @@
   line-height: 1.4;
 }
 
-.benefitsubheading:hover {
-  text-decoration: none;
-  color: #333229;
-}
+//div holding benefit list
 
 .benefitlist {
   max-height: 500px;
@@ -53,12 +66,16 @@
   overflow-x: hidden;
 }
 
+//hide scroll on benefit list until user scrolls inside div
+
 #HIDESCROLL {
   overflow: hidden;
 }
 
 
-///////////////////////////BENEFITS RESULTS PAGE//////////////////////////////
+///////////////////////////BENEFIT SHOW PAGE//////////////////////////////
+
+//You searched for heading
 
 .resultsheading {
   font-family: 'Rubik', sans-serif;
@@ -74,6 +91,8 @@
   margin-top: 13px;
 }
 
+//main block of text
+
 .resultsubheading {
   font-family: 'Rubik', sans-serif;
   font-size: 21px;
@@ -86,6 +105,8 @@
   margin-left: 364px;
 }
 
+//order at counter text
+
 .resultscounternote {
   font-size: 18px;
   color: #333229;
@@ -94,7 +115,11 @@
   min-width: 250px;
 }
 
+//////////////////////////////ADMIN BENEFIT PAGES/////////////////////////////
+
 //////////////////////////////NEW BENEFIT STYLING/////////////////////////////
+
+//Add item button
 
 input.addbenefitbutton {
   font-family: 'Rubik', sans-serif;
@@ -111,6 +136,8 @@ input.addbenefitbutton {
   margin-left: 116px;
 }
 
+//Add item name FIELD
+
 input#benefit_name {
   font-family: 'Rubik', sans-serif;
   font-size: 15px;
@@ -121,10 +148,14 @@ input#benefit_name {
   display: inline-block;
 }
 
+//Add item name LABEL
+
 label.benefitnamelabel {
   margin-left: 200px;
   margin-bottom: 18px;
 }
+
+//List of benefits
 
 .benefit_list_labels {
   display: inline-block;
@@ -141,6 +172,8 @@ label.benefitnamelabel {
   width: 337px;
   border: 3px black solid;
 }
+
+//Edit buttons next to benefit list items
 
 a.benefit_editbutton {
   font-family: 'Rubik', sans-serif;

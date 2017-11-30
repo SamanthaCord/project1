@@ -1,37 +1,42 @@
+<!-- public side nav -->
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"></span>
   <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
 
   <div id="mySidenav" class="sidenav">
     <span style="font-size:59px;cursor:pointer" onclick="closeNav()" class="closebtn">&times;</span>
 
-        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+      <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+      <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
 
-        <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
-        <h3 class="or-text">OR</h3>
-        <a href="/benefits" class="navitem">Choose by problem area</a>
-        <a href="/random" class="navitem">Choose for me</a>
-        <a href="/weathersearch" class="navitem">Choose by weather</a>
-</div>
+      <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
+      <h3 class="or-text">OR</h3>
+      <a href="/benefits" class="navitem">Choose by problem area</a>
+      <a href="/random" class="navitem">Choose for me</a>
+      <a href="/weathersearch" class="navitem">Choose by weather</a>
+  </div>
+
+<!-- main page content  -->
 
 <div class="row" id="logincontainer">
   <div class="col-md-8 col-md-offset-2">
     <h1 class="loginheading">Admin Log In</h1>
-  </br>
+</br>
     <%= flash[:error] %>
 
     <%= form_tag login_path, :class => 'loginform' do %>
       <%= label_tag :email %>
       <%= email_field_tag :email %>
-  </br>
-</br>
+
       <%= label_tag :password %>
       <%= password_field_tag :password %>
-  </br>
+
       <%= submit_tag "ENTER", :class => 'loginbutton' %>
     <% end %>
   </div>
 </div>
+
+<!-- public page footer  -->
 
 <footer class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">

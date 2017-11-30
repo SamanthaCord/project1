@@ -1,3 +1,4 @@
+<!-- admin side nav -->
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"></span>
   <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
@@ -5,22 +6,24 @@
   <div id="mySidenav" class="adminsidenav">
     <span style="font-size:59px;cursor:pointer" onclick="closeNav()" class="closebtn">&times;</span>
 
-        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+      <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+      <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
 
-        <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
-        <h3 class="or-text">OR</h3>
-        <a href="/menus/new" class="navitem">Add/Edit Menu</a>
-        <a href="/benefits/new" class="navitem">Add/Edit HealthList</a>
-        <a href="/users/new" class="navitem">Add Team Member</a>
-</div>
+      <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
+      <h3 class="or-text">OR</h3>
+      <a href="/menus/new" class="navitem">Add/Edit Menu</a>
+      <a href="/benefits/new" class="navitem">Add/Edit HealthList</a>
+      <a href="/users/new" class="navitem">Add Team Member</a>
+  </div>
+
+<!-- main page content  -->
 
 <div id="benefitmain">
 <body class="menubody">
   <div class="col-md-11">
-  <% if @current_user.present? %>
-    <div class="bg-success"><h3 class="signedin_message"> You are signed in as <%= @current_user.name %></h3></div>
-  <% end %>
+    <% if @current_user.present? %>
+      <div class="bg-success"><h3 class="signedin_message"> You are signed in as <%= @current_user.name %></h3></div>
+    <% end %>
   </div>
 
   <div class="row" id="signupcontainer">
@@ -30,13 +33,14 @@
       <h3 class='userlistfineprint'>Type: Administrator</h3>
       <% @users.each do |user| %>
         <ul class="userul">
-            <li class="userlist"><%= user.name %></li>
-            <li class="userlist"><%= user.email %></li>
+          <li class="userlist"><%= user.name %></li>
+          <li class="userlist"><%= user.email %></li>
         </ul>
       <% end %>
     </div>
   </div>
 
+<!-- admin page footer  -->
   <footer class="adminbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
@@ -50,3 +54,4 @@
   </footer>
 
 </body>
+</div>

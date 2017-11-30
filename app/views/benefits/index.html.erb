@@ -1,50 +1,57 @@
+<!-- public side nav -->
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"></span>
   <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
 
   <div id="mySidenav" class="sidenav">
     <span style="font-size:59px;cursor:pointer" onclick="closeNav()" class="closebtn">&times;</span>
 
-        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+      <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+      <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
 
-        <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
-        <h3 class="or-text">OR</h3>
-        <a href="/benefits" class="navitem">Choose by problem area</a>
-        <a href="/random" class="navitem">Choose for me</a>
-        <a href="/weathersearch" class="navitem">Choose by weather</a>
-</div>
+      <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
+      <h3 class="or-text">OR</h3>
+      <a href="/benefits" class="navitem">Choose by problem area</a>
+      <a href="/random" class="navitem">Choose for me</a>
+      <a href="/weathersearch" class="navitem">Choose by weather</a>
+  </div>
+
+<!-- main page content  -->
 
 <div id="benefitmain">
 <body class="menubody">
-<h3 class="fineprint">Scroll through the list, and select a health kick or problem area so we can recommend food / drinks for you.</h3>
-<h1 class="benefitpageheading">We know food. Ask us to describe our favourite Star Wars character and you’re bound to be disappointed. Need to fight off the flu? You better sit down because we.have.answers and it all starts with food, good food!</h1>
+  <h3 class="fineprint">Scroll through the list, and select a health kick or problem area so we can recommend food / drinks for you.</h3>
+  <h1 class="benefitpageheading">We know food. Ask us to describe our favourite Star Wars character and you’re bound to be disappointed. Need to fight off the flu? You better sit down because we.have.answers and it all starts with food, good food!</h1>
 
-<div class="benefitlist" id="HIDESCROLL" onmouseover="this.style.overflow='scroll'"
-onmouseout="this.style.overflow='hidden'">
-  <% @benefits.each do |benefit| %>
-    <ul>
-    <div class="row">
-      <div class="col-md-4 col-md-offset-4">
-        <li class="benefitsubheading"><%= link_to benefit.name, benefit_path(benefit.id), :class => 'benefitsubheading' %></li>
-      </div>
-    </div>
-    </ul>
-  <% end %>
-</div>
-</div>
-
-<footer class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
-    <h3 class="footeritem">Developed by <a href="https://www.linkedin.com/in/samantha-cordingley-8346ba1a/" class="footeritem" id="footerlink" target="_blank">Coda</a></h3>
-
-    <% if session[:user_id].present? %>
-      <h3 class="footeritem"><%= link_to "Log in as Admin", dashboard_path, :class => "footeritem", :id => "footerlink" %></h3>
-    <% else %>
-        <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+<!-- loop through and display list of benefits with link to show benefits page for each -->
+<!-- hide scroll bar inside benefits list unless mouse over div -->
+  <div class="benefitlist" id="HIDESCROLL" onmouseover="this.style.overflow='scroll'"
+  onmouseout="this.style.overflow='hidden'">
+    <% @benefits.each do |benefit| %>
+      <ul>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <li class="benefitsubheading"><%= link_to benefit.name, benefit_path(benefit.id), :class => 'benefitsubheading' %></li>
+          </div>
+        </div>
+      </ul>
     <% end %>
+    </div>
   </div>
-</footer>
 
+  <!-- public page footer  -->
+
+  <footer class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
+      <h3 class="footeritem">Developed by <a href="https://www.linkedin.com/in/samantha-cordingley-8346ba1a/" class="footeritem" id="footerlink" target="_blank">Coda</a></h3>
+
+      <% if session[:user_id].present? %>
+        <h3 class="footeritem"><%= link_to "Log in as Admin", dashboard_path, :class => "footeritem", :id => "footerlink" %></h3>
+      <% else %>
+          <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+      <% end %>
+    </div>
+  </footer>
 
 </body>

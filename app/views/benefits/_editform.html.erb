@@ -1,12 +1,15 @@
+<!-- form for editing benefit from health list -->
+
 <%= form_for @benefit do | f | %>
-<fieldset>
-  <%= f.label :name %>
-  <%= f.text_field :name, :required => true, :placeholder => 'Immunity' %>
-</fieldset>
-<label></label>
-<fieldset>
-  <%= f.submit "Update Item", :class => 'updatebutton' %>
-</fieldset>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true, :placeholder => 'Immunity' %>
+  </fieldset>
+  <label></label>
+  <fieldset>
+    <%= f.submit "Update Item", :class => 'updatebutton' %>
+  </fieldset>
 <% end %>
 
+<!-- delete button  -->
 <%= button_to 'Delete Item', @benefit, :method => 'delete', :class => 'deletebutton', :data => { :confirm => 'Are you sure? This item will be deleted forever'} %>

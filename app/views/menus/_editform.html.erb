@@ -1,40 +1,41 @@
+<!-- form for editing menu items -->
 
 <%= form_for @menu do | f | %>
-<fieldset>
-  <%= f.label :name %>
-  <%= f.text_field :name, :placeholder => 'Name  Eg.  Toast' %>
-</fieldset>
-<fieldset>
-  <%= f.label :ingredients %>
-  <%= f.text_field :ingredients, :placeholder => 'Description  of  item' %>
-</fieldset>
-<fieldset>
-  <%= f.label :price %>
-  <%= f.text_field :price, :placeholder => '$20.00' %>
-</fieldset>
-<fieldset>
-  <%= f.label :size %>
-  <%= f.number_field :size, :placeholder => '1 = Light,   2 = Main,   3 = Drink' %>
-</fieldset>
-<fieldset>
-  <%= f.label :weather %>
-  <%= f.number_field :weather, :placeholder => "Eat when 1 = It's cold,  2 = It's hot,  3 = All Weather" %>
-</fieldset>
-<fieldset>
-  <ul class="checkbox">
-    <%= f.label "Benefits", :class => "benefitlabel" %>
-    <%= f.collection_check_boxes :benefit_ids, @benefits, :id, :name do |b| %>
-      <li class="benefitsublabels">
-        <%= b.check_box %>
-        <%= b.label %>
-      </li>
-    <% end %>
-  </ul>
-</fieldset>
-<label></label>
-<fieldset>
-  <%= f.submit "Update Item", :class => 'updatebutton' %>
-</fieldset>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name, :placeholder => 'Name  Eg.  Toast' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients, :placeholder => 'Description  of  item' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :price %>
+    <%= f.text_field :price, :placeholder => '$20.00' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :size %>
+    <%= f.number_field :size, :placeholder => '1 = Light,   2 = Main,   3 = Drink' %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :weather %>
+    <%= f.number_field :weather, :placeholder => "Eat when 1 = It's cold,  2 = It's hot,  3 = All Weather" %>
+  </fieldset>
+  <fieldset>
+    <ul class="checkbox">
+      <%= f.label "Benefits", :class => "benefitlabel" %>
+      <%= f.collection_check_boxes :benefit_ids, @benefits, :id, :name do |b| %>
+        <li class="benefitsublabels">
+          <%= b.check_box %>
+          <%= b.label %>
+        </li>
+      <% end %>
+    </ul>
+  </fieldset>
+  <label></label>
+  <fieldset>
+    <%= f.submit "Update Item", :class => 'updatebutton' %>
+  </fieldset>
 <% end %>
 
 <%= button_to 'Delete Item', @menu, :method => 'delete', :class => 'deletebutton', :data => { :confirm => 'Are you sure? This item will be deleted forever'} %>

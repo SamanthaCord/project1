@@ -1,7 +1,9 @@
+<!-- form for creating new benefit for health list -->
+
 <%= form_for @benefit do | f | %>
   <fieldset>
-      <%= f.label :name, :class => 'benefitnamelabel' %>
-      <%= f.text_field :name, :required => true, :placeholder => '  Problem area or health kick  Eg. Immunity' %>
+    <%= f.label :name, :class => 'benefitnamelabel' %>
+    <%= f.text_field :name, :required => true, :placeholder => '  Problem area or health kick  Eg. Immunity' %>
   </fieldset>
   <label></label>
   <fieldset>

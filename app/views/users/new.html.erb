@@ -1,29 +1,33 @@
+<!-- admin side nav -->
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"></span>
   <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
 
   <div id="mySidenav" class="adminsidenav">
     <span style="font-size:59px;cursor:pointer" onclick="closeNav()" class="closebtn">&times;</span>
 
-        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+      <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+      <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
 
-        <a href="/dashboard" class="navitem" id="firstitem">Back To Dash</a>
-        <h3 class="or-text">OR</h3>
-        <a href="/menus/new" class="navitem">Add/Edit Menu</a>
-        <a href="/benefits/new" class="navitem">Add/Edit HealthList</a>
-        <a href="/users/new" class="navitem">Add Team Member</a>
-</div>
+      <a href="/dashboard" class="navitem" id="firstitem">Back To Dash</a>
+      <h3 class="or-text">OR</h3>
+      <a href="/menus/new" class="navitem">Add/Edit Menu</a>
+      <a href="/benefits/new" class="navitem">Add/Edit HealthList</a>
+      <a href="/users/new" class="navitem">Add Team Member</a>
+  </div>
+
+<!-- main page content  -->
 
 <div class="row" id="signupcontainer">
   <div class="col-md-11">
     <h1 class="updateheading">Add Admin User</h1>
-</br>
+
     <% if @user.errors.any? %>
-    <ol>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ol>
+      <ol>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ol>
     <% end %>
 
     <%= form_for @user do |f| %>
@@ -41,6 +45,8 @@
     <% end %>
   </div>
 </div>
+
+<!-- admin page footer  -->
 
 <footer class="adminbar navbar-default navbar-fixed-bottom">
   <div class="container">

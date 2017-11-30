@@ -1,29 +1,42 @@
+<!-- home page border -->
+
 <div id="left"></div>
 <div id="right"></div>
 <div id="top"></div>
 <div id="bottom"></div>
 
+<!-- main page content  -->
+
 <body class="homebody">
 
-<div class="col-md-4 col-md-offset-0">
-  <h1 class="logo"><%= link_to 'Bite Rite', root_path, :class => "logo" %></h1>
-  <h2 class="tagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "tagline" %> </h2>
-</div>
+<!-- main logo and tagline, top left corner  -->
+  <div class="col-md-4 col-md-offset-0">
+    <h1 class="logo"><%= link_to 'Bite Rite', root_path, :class => "logo" %></h1>
+    <h2 class="tagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "tagline" %> </h2>
+  </div>
 
-<div class="col-md-8 col-md-offset-2" class="welcomecontainer">
-  <h3 class="welcome">Welcome!</h3>
-  <h1 class="orderheading">Choose [what to eat] by:</h1>
-</div>
+<!-- Heading text -->
 
-<div class="col-md-10 col-md-offset-1">
-  <button class="mainbuttons"><%= link_to 'full menu', menus_path %></button>
-  <button class="mainbuttons"><%= link_to 'health kick', benefits_path %></button>
-  <button class="mainbuttons"><%= link_to 'surprise me', random_path %></button>
-</div>
+  <div class="col-md-8 col-md-offset-2" class="welcomecontainer">
+    <h3 class="welcome">Welcome!</h3>
+    <h1 class="orderheading">Choose [what to eat] by:</h1>
+  </div>
 
-<div class="col-md-8 col-md-offset-2">
-  <h3 class="temperaturelink"><%= link_to 'Or, pick a meal based on the current temperature', weathersearch_path, :class => 'temperaturelink' %></h3>
-</div>
+<!-- main buttons -->
+
+  <div class="col-md-10 col-md-offset-1">
+    <button class="mainbuttons"><%= link_to 'full menu', menus_path %></button>
+    <button class="mainbuttons"><%= link_to 'health kick', benefits_path %></button>
+    <button class="mainbuttons"><%= link_to 'surprise me', random_path %></button>
+  </div>
+
+<!-- temperature link -->
+
+  <div class="col-md-8 col-md-offset-2">
+    <h3 class="temperaturelink"><%= link_to 'Or, pick a meal based on the current temperature', weathersearch_path, :class => 'temperaturelink' %></h3>
+  </div>
+
+<!-- HOME page footer  -->
 
 <footer class="navbar navbar-default navbar-fixed-bottom" id="homefooter">
   <div class="container">

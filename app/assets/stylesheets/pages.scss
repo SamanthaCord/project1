@@ -1,8 +1,17 @@
+/*MASTER STYLING SHEET FOR ADMIN FOOTER, DASHBOARD, HOME PAGE, RANDOM & WEATHER PAGES*/
+
+
+//TESTING
 // * {
-//   border: solid green 1px;
+//   border: green 1px solid;
 // }
 
-/////////////////////////HOME STYLING///////////////////////////
+//////////////////////////////PUBLIC PAGES////////////////////////////
+/////////////FOR MENU OR BENEFIT PUBLIC PAGES SEE RELEVANT SCSS FILES/////////
+
+//////////////////////////HOME PAGE///////////////////////////
+
+//margin applied to complete document to allow content to clear footer
 
 html {
   margin-top: 0;
@@ -10,11 +19,15 @@ html {
   margin-bottom: 120px;
 }
 
+//body of page
+
 .homebody {
   background-color: #333229;
   font-family: 'Rubik', sans-serif;
   color: white;
 }
+
+//full logo
 
 .logo {
   font-family: 'Ubuntu', sans-serif;
@@ -32,6 +45,8 @@ html {
   text-decoration: none;
 }
 
+//tagline
+
 .tagline {
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
@@ -45,6 +60,8 @@ html {
   color: white;
   text-decoration: none;
 }
+
+//white page border styling
 
 #top, #bottom, #left, #right {
 	background: white;
@@ -68,12 +85,16 @@ html {
 
 #bottom { bottom: 0; }
 
+//Main page heading
+
 .orderheading {
   font-family: 'Rubik', sans-serif;
   font-size: 50px;
   color: white;
   margin-top: 0;
 }
+
+//welcome fine print
 
 .welcome {
   font-family: 'Rubik', sans-serif;
@@ -85,6 +106,8 @@ html {
 .welcomecontainer {
   margin: 40px;
 }
+
+//main green buttons styling
 
 .mainbuttons {
   display: inline-block;
@@ -102,6 +125,8 @@ html {
   background-color: #333229;
 }
 
+//main button text links inside
+
 .mainbuttons a {
   color: white;
   font-size: 44px;
@@ -112,6 +137,8 @@ html {
 .mainbuttons a:hover {
   text-decoration: none;
 }
+
+//temperature text link
 
 .temperaturelink {
   font-family: 'Rubik', sans-serif;
@@ -128,10 +155,16 @@ html {
   border-bottom: solid white 3px;
 }
 
+//////////////////////HOME PAGE WHITE FOOTER/////////////////////
+
+//footer container
+
 #homefooter {
   background-color: white;
   border: none;
 }
+
+//footer items that aren't links
 
 .homefooteritem {
   font-size: 15px;
@@ -142,6 +175,8 @@ html {
   font-weight: 400;
 }
 
+//footer links
+
 #homefooterlink {
   font-size: 15px;
   display: inline-block;
@@ -150,12 +185,16 @@ html {
   color: #333229;
 }
 
+//additional styling for copyright text
+
 #homecopyright {
   padding-right: 690px;
 }
 
 
 ///////////////////////////////RANDOM PAGE STYLING/////////////////////////////
+
+//main page heading
 
 .randompageheading {
   font-family: 'Rubik', sans-serif;
@@ -169,6 +208,8 @@ html {
   margin-left: 385px;
 }
 
+//random meal text
+
 .randomsubheading {
   font-family: 'Rubik', sans-serif;
   font-size: 38px;
@@ -181,11 +222,15 @@ html {
   margin-left: 385px;
 }
 
+//main content container
+
 .col-md-4.col-md-offset-0 {
   padding-left: 0;
 }
 
 ///////////////////////////////WEATHER PAGE STYLING/////////////////////////////
+
+//green main page heading
 
 .weathersubheading {
   font-family: 'Rubik', sans-serif;
@@ -201,12 +246,16 @@ html {
   margin-top: 38px;
 }
 
+//thermometer icon
+
 .fa.fa-thermometer-quarter.fa-4x {
   margin-left: 365px;
   display: block;
   margin-top: 18px;
   margin-bottom: 7px;
 }
+
+//its currently x degrees fineprint text
 
 .weatherfineprint {
   font-family: 'Rubik', sans-serif;
@@ -221,101 +270,7 @@ html {
 
 ////////////////////////////////DASHBOARD STYLING//////////////////////////////
 
-.allusersheading {
-  font-family: 'Rubik', sans-serif;
-  font-size: 38px;
-  font-weight: 500;
-  color: #000000;
-  padding-right: 0;
-  list-style: none;
-  max-width: 500px;
-  text-align: center;
-  margin-top: 48px;
-}
-
-.userfineprint {
-  font-family: 'Rubik', sans-serif;
-  color: #000000;
-  margin-left: 432px;
-  padding-top: 50px;
-  width: 166px;
-  line-height: 1.4;
-  font-size: 28px;
-  margin-top: 35px;
-}
-
-.userul{
-  margin: 30px;
-  margin-left: -20px;
-}
-
-.userlist {
-  list-style: none;
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  color: #333229;
-}
-
-///////////////////////////////ADMIN FOOTER/////////////////////////////////
-
-.adminbar.navbar-default.navbar-fixed-bottom {
-  background-color: #000000;
-  border: none;
-  margin-top: 50px;
-}
-
-/////////////////////////////ADMIN SIDE NAV////////////////////////////////
-
-.adminsidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #000000;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 30px;
-}
-
-a.adminsidenav {
-  color: black;
-  font-family: 'Rubik', sans-serif;
-  font-size: 30px;
-  padding-bottom: 42px;
-  padding-right: 0;
-  line-height: 1;
-  padding-left: 20px;
-  transition: 0.3s;
-}
-
-a.adminsidenav:hover {
-  text-decoration: none;
-}
-
-.adminsidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 59px;
-    color: white;
-    margin-left: 50px;
-    text-decoration: none;
-}
-
-.footerlink {
-  font-family: 'Rubik', sans-serif;
-  font-size: 15px;
-  display: inline-block;
-  font-weight: bold;
-  color: white;
-  margin-left: 26px;
-}
-
-.footerlink:hover {
-  color: white;
-}
+//signed in as messgae bar
 
 .signedin_message {
   font-family: 'Rubik', sans-serif;
@@ -333,3 +288,134 @@ a.adminsidenav:hover {
   height: 72px;
   display: block;
   }
+
+//BiteRite logo
+
+.loginlogo {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #333229;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 7px;
+  display: inline-block;
+  margin-top: 5px;
+  }
+
+.loginlogo:hover {
+  color: #333229;
+  text-decoration: none;
+  }
+
+//all users heading
+
+.allusersheading {
+  font-family: 'Rubik', sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #000000;
+  padding-right: 0;
+  list-style: none;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 48px;
+}
+
+//Type heading
+
+.userfineprint {
+  font-family: 'Rubik', sans-serif;
+  color: #000000;
+  margin-left: 432px;
+  padding-top: 50px;
+  width: 166px;
+  line-height: 1.4;
+  font-size: 28px;
+  margin-top: 35px;
+}
+
+//list of users
+
+.userul{
+  margin: 30px;
+  margin-left: -20px;
+}
+
+//user list items
+
+.userlist {
+  list-style: none;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  color: #333229;
+}
+
+///////////////////////////////ADMIN FOOTER/////////////////////////////////
+
+//change in color for admin footer
+
+.adminbar.navbar-default.navbar-fixed-bottom {
+  background-color: #000000;
+  border: none;
+  margin-top: 50px;
+}
+
+//sign out footer item
+
+.footerlink {
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  margin-left: 26px;
+}
+
+.footerlink:hover {
+  color: white;
+}
+
+/////////////////////////////ADMIN SIDE NAV////////////////////////////////
+
+//change in color for admin side nav
+
+.adminsidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+
+// a.adminsidenav {
+//   color: black;
+//   font-family: 'Rubik', sans-serif;
+//   font-size: 30px;
+//   padding-bottom: 42px;
+//   padding-right: 0;
+//   line-height: 1;
+//   padding-left: 20px;
+//   transition: 0.3s;
+// }
+//
+// a.adminsidenav:hover {
+//   text-decoration: none;
+// }
+
+//admin side nav X icon
+
+.adminsidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 59px;
+    color: white;
+    margin-left: 50px;
+    text-decoration: none;
+}

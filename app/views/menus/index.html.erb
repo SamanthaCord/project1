@@ -1,71 +1,79 @@
+<!-- public side nav -->
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"></span>
   <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
 
   <div id="mySidenav" class="sidenav">
     <span style="font-size:59px;cursor:pointer" onclick="closeNav()" class="closebtn">&times;</span>
 
-        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+      <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+      <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
 
-        <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
-        <h3 class="or-text">OR</h3>
-        <a href="/benefits" class="navitem">Choose by problem area</a>
-        <a href="/random" class="navitem">Choose for me</a>
-        <a href="/weathersearch" class="navitem">Choose by weather</a>
-</div>
+      <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
+      <h3 class="or-text">OR</h3>
+      <a href="/benefits" class="navitem">Choose by problem area</a>
+      <a href="/random" class="navitem">Choose for me</a>
+      <a href="/weathersearch" class="navitem">Choose by weather</a>
+  </div>
 
+<!-- main page content  -->
 
   <div class="col-md-4 col-md-offset-8">
     <h3  class="counternote">*Please order at the counter.</h3>
   </div>
 
 <body class="menubody">
-  <div class="row">
     <div class="col-md-5 col-md-offset-3">
       <h1 class="pageheading">ALL DAY MENU</h1>
       <h2 class="pagesubheading">SOMETHING LIGHT</h2>
     </div>
-      <% @menus.each do |menu| %>
+
+<!-- loop through menu items and display items with size 1 on page -->
+    <% @menus.each do |menu| %>
       <% if menu.size == 1 %>
         <ul>
-    <div class="col-md-7 col-md-offset-3">
-          <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
-          <li class="menulist"><%= menu.ingredients %></li>
-    </div>
+          <div class="col-md-7 col-md-offset-3">
+            <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+            <li class="menulist"><%= menu.ingredients %></li>
+          </div>
         </ul>
-        <% end %>
       <% end %>
+    <% end %>
 
-  <div class="row">
     <div class="col-md-5 col-md-offset-3">
       <h2 class="pagesubheading">I'M HUNGRY</h2>
     </div>
-      <% @menus.each do |menu| %>
+
+<!-- loop through menu items and display items with size 2 on page -->
+    <% @menus.each do |menu| %>
       <% if menu.size == 2 %>
         <ul>
-    <div class="col-md-7 col-md-offset-3">
-          <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
-          <li class="menulist"><%= menu.ingredients %></li>
-    </div>
+          <div class="col-md-7 col-md-offset-3">
+            <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+            <li class="menulist"><%= menu.ingredients %></li>
+          </div>
         </ul>
-        <% end %>
       <% end %>
+    <% end %>
 
-  <div class="row">
+
     <div class="col-md-5 col-md-offset-3">
       <h2 class="pagesubheading">DRINKS</h2>
     </div>
-      <% @menus.each do |menu| %>
+
+<!-- loop through menu items and display items with size 2 on page -->
+    <% @menus.each do |menu| %>
       <% if menu.size == 3 %>
         <ul>
-    <div class="col-md-7 col-md-offset-3">
-          <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
-          <li class="menulist"><%= menu.ingredients %></li>
-    </div>
+          <div class="col-md-7 col-md-offset-3">
+            <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+            <li class="menulist"><%= menu.ingredients %></li>
+          </div>
         </ul>
-        <% end %>
       <% end %>
+    <% end %>
 
+<!-- public page footer  -->
 
   <footer class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">

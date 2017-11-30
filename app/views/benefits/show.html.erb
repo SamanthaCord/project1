@@ -1,19 +1,22 @@
+<!-- public side nav -->
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="fa fa-bars fa-4x"></span>
   <h1 class="mainmenulogo"><%= link_to 'BR', root_path, :class => "mainmenulogo" %></h1>
 
   <div id="mySidenav" class="sidenav">
     <span style="font-size:59px;cursor:pointer" onclick="closeNav()" class="closebtn">&times;</span>
 
-        <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
-        <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
+      <h1 class="menulogo"><%= link_to 'BR', root_path, :class => "menulogo" %></h1>
+      <h2 class="menutagline"><%= link_to 'ZERO FOOD ENVY', root_path, :class => "menutagline" %> </h2>
 
-        <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
-        <h3 class="or-text">OR</h3>
-        <a href="/benefits" class="navitem">Choose by problem area</a>
-        <a href="/random" class="navitem">Choose for me</a>
-        <a href="/weathersearch" class="navitem">Choose by weather</a>
-</div>
+      <a href="/menus" class="navitem" id="firstitem">See Full Menu</a>
+      <h3 class="or-text">OR</h3>
+      <a href="/benefits" class="navitem">Choose by problem area</a>
+      <a href="/random" class="navitem">Choose for me</a>
+      <a href="/weathersearch" class="navitem">Choose by weather</a>
+  </div>
 
+<!-- main page content  -->
 
 <body class="menubody">
   <div class="col-md-3 col-md-offset-9">
@@ -26,6 +29,7 @@
 
   <h3 class="resultsubheading">To assist with <%= @benefit.name %>, we recommend: </h3>
 
+<!-- loop through menu items with size 1 and if selected benefit is present display item on page -->
     <% @menus.each do |menu| %>
       <% menu.benefits.each do |benefit| %>
         <% if @benefit.name == benefit.name %>
@@ -41,21 +45,23 @@
       <% end %>
     <% end %>
 
-  <% @menus.each do |menu| %>
-    <% menu.benefits.each do |benefit| %>
-      <% if @benefit.name == benefit.name %>
-        <% if menu.size == 2 %>
-          <ul>
-            <div class="col-md-7 col-md-offset-3">
-              <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
-              <li class="menulist"><%= menu.ingredients %></li>
-            </div>
-          </ul>
+<!-- loop through menu items with size 2 and if selected benefit is present display item on page -->
+    <% @menus.each do |menu| %>
+      <% menu.benefits.each do |benefit| %>
+        <% if @benefit.name == benefit.name %>
+          <% if menu.size == 2 %>
+            <ul>
+              <div class="col-md-7 col-md-offset-3">
+                <li class="menuheading"><%= menu.name %><span class="menuprice"><%= menu.price %></span></li>
+                <li class="menulist"><%= menu.ingredients %></li>
+              </div>
+            </ul>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
-  <% end %>
 
+<!-- loop through menu items with size 3 and if selected benefit is present display item on page -->
     <% @menus.each do |menu| %>
       <% menu.benefits.each do |benefit| %>
         <% if @benefit.name == benefit.name %>
@@ -71,7 +77,7 @@
       <% end %>
     <% end %>
 
-
+<!-- public page footer  -->
   <footer class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
@@ -84,6 +90,5 @@
       <% end %>
     </div>
   </footer>
-
 
 </body>
