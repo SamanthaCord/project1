@@ -1,23 +1,36 @@
-<h1>Add Admin User</h1>
+<div class="row" id="signupcontainer">
+  <div class="col-md-11">
+    <h1 class="loginlogo"><%= link_to 'BR', root_path, :class => "loginlogo" %></h1>
+    <h1 class="loginheading">Add Admin User</h1>
+</br>
+    <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ol>
+    <% end %>
 
-<% if @user.errors.any? %>
-<ol>
-  <% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-</ol>
-<% end %>
+    <%= form_for @user do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
 
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+      <%= f.submit "Create User", :class => 'createuserbutton' %>
+    <% end %>
+  </div>
+</div>
 
-  <%= f.submit "Create User" %>
-<% end %>
+<footer class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <h3 class="footeritem" id="copyright">© BiteRite 2017</h3>
+    <h3 class="footeritem">Developed by <a href="https://www.linkedin.com/in/samantha-cordingley-8346ba1a/" class="footeritem" id="footerlink" target="_blank">Coda</a></h3>
+    <h3 class="footeritem"><%= link_to "Log in as Admin", login_path, :class => "footeritem", :id => "footerlink" %></h3>
+  </div>
+</footer>
